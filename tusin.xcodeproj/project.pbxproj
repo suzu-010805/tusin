@@ -15,6 +15,11 @@
 		0ED35F9123D2C5D80082363C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED35F8F23D2C5D80082363C /* LaunchScreen.storyboard */; };
 		0ED35F9C23D2C5D80082363C /* tusinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35F9B23D2C5D80082363C /* tusinTests.swift */; };
 		0ED35FA723D2C5D80082363C /* tusinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35FA623D2C5D80082363C /* tusinUITests.swift */; };
+		0ED35FB723D2CB660082363C /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED35FB623D2CB660082363C /* APIKit.framework */; };
+		0ED35FBA23D6D58D0082363C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35FB923D6D58D0082363C /* Article.swift */; };
+		0ED35FBD23D6D8C60082363C /* QiitaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35FBC23D6D8C60082363C /* QiitaAPI.swift */; };
+		0ED35FC023D6DCF20082363C /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35FBF23D6DCF20082363C /* DecodableDataParser.swift */; };
+		0ED35FC223D6E34D0082363C /* FetchArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED35FC123D6E34D0082363C /* FetchArticleRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		0ED35FA223D2C5D80082363C /* tusinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tusinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED35FA623D2C5D80082363C /* tusinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tusinUITests.swift; sourceTree = "<group>"; };
 		0ED35FA823D2C5D80082363C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED35FB623D2CB660082363C /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		0ED35FB923D6D58D0082363C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		0ED35FBC23D6D8C60082363C /* QiitaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPI.swift; sourceTree = "<group>"; };
+		0ED35FBF23D6DCF20082363C /* DecodableDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
+		0ED35FC123D6E34D0082363C /* FetchArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchArticleRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED35FB723D2CB660082363C /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +94,7 @@
 				0ED35F9A23D2C5D80082363C /* tusinTests */,
 				0ED35FA523D2C5D80082363C /* tusinUITests */,
 				0ED35F8223D2C5D60082363C /* Products */,
+				0ED35FB523D2CB650082363C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,9 @@
 				0ED35F8423D2C5D60082363C /* AppDelegate.swift */,
 				0ED35F8623D2C5D60082363C /* SceneDelegate.swift */,
 				0ED35F8823D2C5D60082363C /* ViewController.swift */,
+				0ED35FBE23D6DC7B0082363C /* Utils */,
+				0ED35FBB23D6D8450082363C /* API */,
+				0ED35FB823D6D4DE0082363C /* Model */,
 				0ED35F8A23D2C5D60082363C /* Main.storyboard */,
 				0ED35F8D23D2C5D80082363C /* Assets.xcassets */,
 				0ED35F8F23D2C5D80082363C /* LaunchScreen.storyboard */,
@@ -128,6 +143,39 @@
 			path = tusinUITests;
 			sourceTree = "<group>";
 		};
+		0ED35FB523D2CB650082363C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED35FB623D2CB660082363C /* APIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ED35FB823D6D4DE0082363C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ED35FB923D6D58D0082363C /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0ED35FBB23D6D8450082363C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0ED35FBC23D6D8C60082363C /* QiitaAPI.swift */,
+				0ED35FC123D6E34D0082363C /* FetchArticleRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0ED35FBE23D6DC7B0082363C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0ED35FBF23D6DCF20082363C /* DecodableDataParser.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +186,7 @@
 				0ED35F7D23D2C5D50082363C /* Sources */,
 				0ED35F7E23D2C5D50082363C /* Frameworks */,
 				0ED35F7F23D2C5D50082363C /* Resources */,
+				0ED35FB423D2C9B30082363C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,11 +303,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ED35FB423D2C9B30082363C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0ED35F7D23D2C5D50082363C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED35FBD23D6D8C60082363C /* QiitaAPI.swift in Sources */,
+				0ED35FBA23D6D58D0082363C /* Article.swift in Sources */,
+				0ED35FC223D6E34D0082363C /* FetchArticleRequest.swift in Sources */,
+				0ED35FC023D6DCF20082363C /* DecodableDataParser.swift in Sources */,
 				0ED35F8923D2C5D60082363C /* ViewController.swift in Sources */,
 				0ED35F8523D2C5D60082363C /* AppDelegate.swift in Sources */,
 				0ED35F8723D2C5D60082363C /* SceneDelegate.swift in Sources */,
@@ -436,6 +510,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tusin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +532,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tusin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
