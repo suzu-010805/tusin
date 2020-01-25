@@ -9,7 +9,7 @@
 import Foundation
 import APIKit
 
-struct FechQiitaArticleRequest: QiitaAPI{
+struct FetchQiitaArticleRequest: QiitaAPI{
     typealias Response = [Article]
     
     var method: HTTPMethod {

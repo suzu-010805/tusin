@@ -13,6 +13,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let request = FetchQiitaArticleRequest()
+        
+        Session.send(request) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
