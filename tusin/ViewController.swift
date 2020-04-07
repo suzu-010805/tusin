@@ -14,9 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var articles: [Article]?
         
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = FetchQiitaArticleRequest()
+        // Do any additional setup after loading the view.
+        fetchArticles()
+    }
+    
+    private func fetchArticles(_ text:String? = nil) {
+        let request = FetchQiitaArticleRequest(query: text)
         
         Session.send(request) { result in
             switch result {
@@ -29,10 +37,7 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
 extension ViewController:UITableViewDelegate, UITableViewDataSource {
@@ -56,3 +61,12 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            print("nilです")
+            return
+        }
+        fetchArticles(searchText)
+    }
+}

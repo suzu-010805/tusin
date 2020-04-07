@@ -19,5 +19,13 @@ struct FetchQiitaArticleRequest: QiitaAPI{
     var path: String {
         return "/items"
     }
- 
+    
+    let query: String?
+
+    var queryParameters: [String : Any]? {
+        guard let query = query else {
+            return nil
+        }
+        return ["query":"title:\(query)"]
+    }
 }
